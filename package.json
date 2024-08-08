@@ -15,6 +15,10 @@
     "@launchdarkly/openfeature-node-server": "^1.0.0",
     "@openfeature/open-telemetry-hooks": "^0.4.0",
     "@openfeature/server-sdk": "^1.15.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.39.4",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.45.1",
+    "@opentelemetry/sdk-node": "^0.52.1",
     "express": "^4.19.2"
   }
 }
