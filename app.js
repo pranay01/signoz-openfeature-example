@@ -1,6 +1,10 @@
 import express from 'express';
 import { OpenFeature } from '@openfeature/server-sdk';
 import { LaunchDarklyProvider } from '@launchdarkly/openfeature-node-server';
+import { TracingHook } from '@openfeature/open-telemetry-hooks';
+
+OpenFeature.addHooks(new TracingHook());
+// Refer to adding otel-hooks here - https://www.npmjs.com/package/@openfeature/open-telemetry-hooks
 
 const app = express();
 const port = 3000;
