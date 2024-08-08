@@ -12,3 +12,8 @@ Run this using
 - [x] Check the traces are being seen in SigNoz Cloud
 - [ ] check how to add flag evaluation results via Opentelemetry Hooks
 
+### Resources
+- Specs fro Opentelemetry Hooks - https://github.com/open-feature/.github/issues/16
+- NodeJS package for adding Otel Hooks - https://www.npmjs.com/package/@openfeature/open-telemetry-hooks
+
+
