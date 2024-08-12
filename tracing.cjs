@@ -1,39 +1,23 @@
-// tracing.js
-'use strict'
-const process = require('process');
-const opentelemetry = require('@opentelemetry/sdk-node');
-const { getNodeAutoInstrumentations } = require('@opentelemetry/auto-instrumentations-node');
+/*instrumentation.js*/
+// Require dependencies
+const { NodeSDK } = require('@opentelemetry/sdk-node');
+const { ConsoleSpanExporter } = require('@opentelemetry/sdk-trace-node');
 const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
-const { Resource } = require('@opentelemetry/resources');
-const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
 
-// do not set headers in exporterOptions, the OTel spec recommends setting headers through ENV variables
-// https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md#specifying-headers-via-environment-variables
+const {
+  getNodeAutoInstrumentations,
+} = require('@opentelemetry/auto-instrumentations-node');
 
-// highlight-start
+
 const exporterOptions = {
   url: 'https://ingest.eu.signoz.cloud:443/v1/traces'
+  //url:'http://localhost:4318/v1/traces' //sending to otel-desktop-viewer
 }
-// highlight-end
 
-const traceExporter = new OTLPTraceExporter(exporterOptions);
-const sdk = new opentelemetry.NodeSDK({
-  traceExporter,
+const sdk = new NodeSDK({
+  //traceExporter: new ConsoleSpanExporter(),
+  traceExporter: new OTLPTraceExporter(exporterOptions),
   instrumentations: [getNodeAutoInstrumentations()],
-  resource: new Resource({
-    // highlight-next-line
-    [SemanticResourceAttributes.SERVICE_NAME]: 'node_app'
-  })
 });
 
-// initialize the SDK and register with the OpenTelemetry API
-// this enables the API to record telemetry
-sdk.start()
-
-// gracefully shut down the SDK on process exit
-process.on('SIGTERM', () => {
-  sdk.shutdown()
-    .then(() => console.log('Tracing terminated'))
-    .catch((error) => console.log('Error terminating tracing', error))
-    .finally(() => process.exit(0));
-});
+sdk.start();
