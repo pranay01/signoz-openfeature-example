@@ -24,4 +24,7 @@ Run this using
 - Specs fro Opentelemetry Hooks - https://github.com/open-feature/.github/issues/16
 - NodeJS package for adding Otel Hooks - https://www.npmjs.com/package/@openfeature/open-telemetry-hooks
 
+#### Screenshot
+
+![openfeature-signoz](https://github.com/user-attachments/assets/c8315545-998f-40ec-a6fe-8dea392af9ac)
 
