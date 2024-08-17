@@ -27,8 +27,6 @@ Run this using
 ### Demo Video
 [![YouTube](http://i.ytimg.com/vi/RZSEi8csXK0/hqdefault.jpg)](https://www.youtube.com/watch?v=RZSEi8csXK0)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RZSEi8csXK0?si=2m2N5kxiUYEG-9DH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 #### Screenshot
 
 ![openfeature-signoz](https://github.com/user-attachments/assets/c8315545-998f-40ec-a6fe-8dea392af9ac)
