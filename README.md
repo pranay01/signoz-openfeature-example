@@ -25,7 +25,7 @@ Run this using
 - NodeJS package for adding Otel Hooks - https://www.npmjs.com/package/@openfeature/open-telemetry-hooks
 
 ### Demo Video
-[Here](https://www.loom.com/share/12cb34fb33a5455f8f724953b6aa9434?sid=75143b28-cdf7-47e7-ad86-e083d588c83d)
+[![YouTube](http://i.ytimg.com/vi/RZSEi8csXK0/hqdefault.jpg)](https://www.youtube.com/watch?v=RZSEi8csXK0)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RZSEi8csXK0?si=2m2N5kxiUYEG-9DH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
